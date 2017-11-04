@@ -6,6 +6,9 @@ public:
 
     int sum() {
         int result = 0;
+        if(values.size() == 0) {
+            throw EmptyVectorException();
+        }
         for(int i = 0; i < values.size(); i++) {
             result += values[i];
         }
@@ -14,21 +17,37 @@ public:
 
     int product() {
         int result = 1;
+        if(values.size() == 0) {
+            result = 0;
+            throw EmptyVectorException();
+        }
         for(int i = 0; i < values.size(); i++) {
             result = result * values[i];
         }
         return result;
-    }
+    };
 
     void setValue(int value) {
         values.push_back(value);
     };
 
     void updateValue(int position, int value) {
+        if(values.size() == 0) {
+            throw EmptyVectorException();
+        }
+        if(values.size() < position) {
+            throw PostionException();
+        }
         values[position] = value;
     };
 
     int getValue(int position) const {
+        if(values.size() == 0) {
+            throw EmptyVectorException();
+        }
+        if(values.size() < position) {
+            throw PostionException();
+        }
         return values[position];
     };
 
