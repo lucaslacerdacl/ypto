@@ -80,8 +80,8 @@ PostionException();
 To run the example file, use the code bellow:
 
 ```shell
-git clone https://github.com/LucasLacerdaCL/Ypto.git
-cd Ypto/src
+git clone https://github.com/LucasLacerdaCL/ypto.git
+cd ypto/src
 g++ main.cpp -o main
 ./main
 ```
