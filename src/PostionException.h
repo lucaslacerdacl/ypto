@@ -1,12 +1,8 @@
 class PostionException : public exception {
-private:
-    string errMsg;
 public:
-    PostionException() {
-        errMsg = "A posição informada não existe.";
-    };
+    PostionException() {};
     ~PostionException() throw() {};
-    const char *getMessage() const throw() { 
-      return errMsg.c_str(); 
+    const char *what() const throw() { 
+      return "A posição informada não existe."; 
     };
 };

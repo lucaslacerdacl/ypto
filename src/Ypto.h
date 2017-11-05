@@ -4,7 +4,7 @@ private:
 public:
     Ypto(vector<int> _values = vector<int>()) : values(_values) {};
 
-    int sum() {
+    int sum() const {
         int result = 0;
         if(values.size() == 0) {
             throw EmptyVectorException();
@@ -15,10 +15,9 @@ public:
         return result;
     };
 
-    int product() {
+    int product() const {
         int result = 1;
         if(values.size() == 0) {
-            result = 0;
             throw EmptyVectorException();
         }
         for(int i = 0; i < values.size(); i++) {

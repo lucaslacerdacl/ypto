@@ -26,8 +26,10 @@ int main() {
         cout << x1.getValue(2) << endl;
         cout << x2.getValue(0) << endl;
     } catch(EmptyVectorException& e) {
-        cout << e.getMessage() << endl;
+        cout << e.what() << endl;
     } catch(PostionException& e) {
-        cout << e.getMessage() << endl;
+        cout << e.what() << endl;
+    } catch(exception& e) {
+        cout << e.what() << endl;
     }
 }

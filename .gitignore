@@ -32,6 +32,7 @@
 
 # Executables
 main
+./src/legacy/main
 *.exe
 *.out
 *.app
