@@ -64,8 +64,10 @@ int product();
 
 #### Exceptions
 ```c
-EmptyVectorException();
-PostionException();
+// The provided vector is empty 
+Exception::emptyVector
+// The provided position does not exist
+Exception::invalidPostion
 ```
 
 ## Developing
