@@ -7,7 +7,7 @@ public:
     int sum() const {
         int result = 0;
         if(values.size() == 0) {
-            throw EmptyVectorException();
+            throw Exception::emptyVector();
         }
         for(int i = 0; i < values.size(); i++) {
             result += values[i];
@@ -18,7 +18,7 @@ public:
     int product() const {
         int result = 1;
         if(values.size() == 0) {
-            throw EmptyVectorException();
+            throw Exception::emptyVector();
         }
         for(int i = 0; i < values.size(); i++) {
             result = result * values[i];
@@ -32,20 +32,20 @@ public:
 
     void updateValue(int position, int value) {
         if(values.size() == 0) {
-            throw EmptyVectorException();
+            throw Exception::emptyVector();
         }
         if(values.size() < position) {
-            throw PostionException();
+            throw Exception::invalidPostion();
         }
         values[position] = value;
     };
 
     int getValue(int position) const {
         if(values.size() == 0) {
-            throw EmptyVectorException();
+            throw Exception::emptyVector();
         }
         if(values.size() < position) {
-            throw PostionException();
+            throw Exception::invalidPostion();
         }
         return values[position];
     };
